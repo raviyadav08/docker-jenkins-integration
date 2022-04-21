@@ -14,10 +14,10 @@ pipeline {
             }
         }
 		
-		stage('SCM Checkout'){
-			steps{
-				git 'https://github.com/raviyadav08/docker-jenkins-integration'
-				}
+	stage('SCM Checkout'){
+		steps{
+			git 'https://github.com/raviyadav08/docker-jenkins-integration'
+			}
 		}
 		
 		
