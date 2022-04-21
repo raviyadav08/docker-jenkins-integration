@@ -28,7 +28,7 @@ pipeline {
 		sh "mvn package"				
             }
             post {
-		    always{
+		always{
 			cleanWs()
 		}	
             }
