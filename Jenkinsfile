@@ -28,13 +28,9 @@ pipeline {
 		sh "mvn package"				
             }
             post {
-                success {
-                    junit 'target/surefire-reports/**/*.xml' 
-                }
-				
-				always{
-					cleanWs()
-				}
+		    always{
+			cleanWs()
+		}	
             }
         }
     }
