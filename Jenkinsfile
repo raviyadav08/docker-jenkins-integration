@@ -27,6 +27,12 @@ pipeline {
 		sh "mvn clean install"
 		sh "mvn package"				
             }
+	
+	stage ('Deployment") {
+	       steps {
+		       sh '''
+		       echo "Build deployed Successfully"
+		}
             post {
 		always{
 			cleanWs()
