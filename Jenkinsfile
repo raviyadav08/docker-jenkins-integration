@@ -28,14 +28,14 @@ pipeline {
 		sh "mvn package"				
             }
 		
-		stage('Deployment'){
+	stage('Deployment'){
 		steps{
 			sh " echo Deployement was succesfull... "			}
 		}
 	}
-            post {
-		    always{
-				cleanWs()
+        post {
+		always{
+		    	cleanWs()
 				}	
             }
         }
