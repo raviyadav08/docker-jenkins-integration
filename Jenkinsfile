@@ -15,29 +15,23 @@ pipeline {
         }
 		
 	stage('SCM Checkout'){
-	     steps{
+		steps{
 			git "https://github.com/raviyadav08/docker-jenkins-integration"
 			}
 		}
 		
 		
         stage ('Build') {
-            	steps {
-                	sh "mvn -version"
-		        sh "mvn clean install"
-		        sh "mvn package"				
+            steps {
+                sh "mvn -version"
+		sh "mvn clean install"
+		sh "mvn package"				
             }
-		
-	stage('Deployment'){
-		steps{
-			sh " echo Deployement was succesfull... "			}
-		}
-	}
-    post {
-	always{
-		cleanWs()
-	    }	
+            post {
+		    always{
+				cleanWs()
+				}	
+            }
         }
     }
 }
-
