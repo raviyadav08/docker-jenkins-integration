@@ -32,6 +32,7 @@ pipeline {
 	       steps {
 		       sh '''
 		       echo "Build deployed Successfully"
+		       '''
 		}
             post {
 		always{
