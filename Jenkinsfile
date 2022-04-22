@@ -28,7 +28,7 @@ pipeline {
 		sh "mvn package"				
             }
 	
-	stage ('Deployment") {
+	stage ('Deployment') {
 	       steps {
 		       sh '''
 		       echo "Build deployed Successfully...."
