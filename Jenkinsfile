@@ -36,6 +36,8 @@ pipeline {
 		       echo "Build deployed Successfully...."
 		       '''
 		}
+		
+	}
         post {
 		always{
 			cleanWs()
@@ -44,4 +46,4 @@ pipeline {
           }
       }
    }
-}
+
