@@ -31,7 +31,7 @@ pipeline {
 	stage ('Deployment") {
 	       steps {
 		       sh '''
-		       echo "Build deployed Successfully"
+		       echo "Build deployed Successfully...."
 		       '''
 		}
             post {
